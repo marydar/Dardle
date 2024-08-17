@@ -11,7 +11,7 @@
     display: flex;
     top: 0px;
     background-color: rgb(8, 8, 8);
-    border-bottom: 0.2px solid #776c5c ;
+    border-bottom: 0.2px solid rgb(87, 87, 87);
     justify-content:center;
     align-items: center;
 }
@@ -45,8 +45,7 @@
     align-items: center;
     height: 60px;
     width: 60px;
-    border: 1px solid #776c5c;
-    /* border: 1px solid rgb(87, 87, 87); */
+    border: 1px solid rgb(87, 87, 87);
     border-radius: 5px;
     color: white;
     font-size: 24px;
@@ -68,7 +67,7 @@
     justify-content: space-evenly;
 }
 .key{
-    background-color:#776c5c ;
+    background-color:rgb(87, 87, 87) ;
     color: white;
     font-size: 20px;
     font-family: Arial;
@@ -159,12 +158,12 @@
       transform: rotateX(90deg);
     }
     51%{
-      background: rgb(56, 56, 56);
+      background: rgb(49, 49, 49);
       border-color: transparent;
     }
     
     100%{
-      background: rgb(56, 56, 56);
+      background: rgb(49, 49, 49);
       border-color: transparent;
       transform: rotateX(0deg);
     }
@@ -177,7 +176,7 @@
     animation-timing-function: linear;
   }
   @keyframes to-green {
-    from {background-color:#776c5c ;}
+    from {background-color:rgb(87, 87, 87) ;}
     to {background-color:rgb(12, 89, 12);}
   }
   .yellowBack{
@@ -188,7 +187,7 @@
     animation-timing-function: linear;
   }
   @keyframes to-yellow {
-    from {background-color:#776c5c ;}
+    from {background-color:rgb(87, 87, 87) ;}
     to {background-color:rgb(145, 118, 7);}
   }
   .grayBack{
@@ -199,8 +198,8 @@
     animation-timing-function: linear;
   }
   @keyframes to-gray {
-    from {background-color:#776c5c ;}
-    to {background-color:rgb(56, 56, 56);}
+    from {background-color:rgb(87, 87, 87) ;}
+    to {background-color:rgb(49, 49, 49);}
   }
   .scale{
     animation-name: example;
@@ -211,4 +210,8 @@
   @keyframes example {
     from {transform: scale(1.2);}
     to {transform: scale(1);}
+  }
+  .img{
+    width: 30px;
+    height: 30px;
   }
