@@ -26,14 +26,17 @@ let colCounter =0;
   
 //   fetchData();
 
-console.log(json, 'the json obj');
+// console.log(json, 'the json obj');
 
 function pressedChar(char){
     console.log(char.toUpperCase());
     if(char.toUpperCase()=="BACKSPACE"){
-        text= text.slice(0, -1);
-        colCounter--;
-        cells[rowCounter][colCounter].innerHTML = "";
+        if(colCounter>0){
+            text= text.slice(0, -1);
+            colCounter--;
+            cells[rowCounter][colCounter].innerHTML = "";
+            cells[rowCounter][colCounter].classList.remove("scale");
+        }
     }
     else if(char.toUpperCase()=="ENTER"){
         if(text.length==column){
@@ -43,6 +46,7 @@ function pressedChar(char){
     else if (text.length<column){
         text+=char.toUpperCase();
         cells[rowCounter][colCounter].innerHTML = char.toUpperCase();
+        cells[rowCounter][colCounter].classList.add("scale");
         colCounter++;
     }  
 }
@@ -50,18 +54,22 @@ function checkCharacters(){
     //if the word is in list
     for(let i = 0; i< column; i++){
         let char = text.charAt(i);
+        cells[rowCounter][i].classList.remove("scale");
         if(target.toUpperCase().includes(char)){
             if(target.charAt(i).toUpperCase()==char){
                 cells[rowCounter][i].classList.add("green-cell");
+                keyMap.get(char).classList.add("greenBack");
                 // cells[rowCounter][i].innerHTML = "A"; 
             }
             else{
                 cells[rowCounter][i].classList.add("yellow-cell");
+                keyMap.get(char).classList.add("yellowBack");
                 // cells[rowCounter][i].innerHTML = "B";
             }
         }
         else{
             cells[rowCounter][i].classList.add("gray-cell");
+            keyMap.get(char).classList.add("grayBack");
             // cells[rowCounter][i].innerHTML = "F";
         }
     }

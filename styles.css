@@ -169,3 +169,46 @@
       transform: rotateX(0deg);
     }
   }
+  .greenBack{
+    animation-name: to-green;
+    animation-duration: 0.2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+  @keyframes to-green {
+    from {background-color:#776c5c ;}
+    to {background-color:rgb(12, 89, 12);}
+  }
+  .yellowBack{
+    animation-name: to-yellow;
+    animation-duration: 0.2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+  @keyframes to-yellow {
+    from {background-color:#776c5c ;}
+    to {background-color:rgb(145, 118, 7);}
+  }
+  .grayBack{
+    animation-name: to-gray;
+    animation-duration: 0.2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+  @keyframes to-gray {
+    from {background-color:#776c5c ;}
+    to {background-color:rgb(56, 56, 56);}
+  }
+  .scale{
+    animation-name: example;
+    animation-duration: 0.2s;
+    animation-delay: 0s !important; 
+}
+  
+  @keyframes example {
+    from {transform: scale(1.2);}
+    to {transform: scale(1);}
+  }
