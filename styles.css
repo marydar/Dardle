@@ -205,6 +205,17 @@
     from {background-color:rgb(87, 87, 87) ;}
     to {background-color:rgb(34, 34, 34);}
   }
+  .yellowToGreen{
+    animation-name: Y-to-G;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0s ; 
+  }
+  @keyframes Y-to-G {
+    from {background-color:rgb(145, 118, 7);}
+    to {background-color:rgb(12, 89, 12);}
+  }
   .scale{
     animation-name: example;
     animation-duration: 0.2s;

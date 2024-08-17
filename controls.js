@@ -50,33 +50,48 @@ function pressedChar(char){
         colCounter++;
     }  
 }
+function checkForGreen(char){
+    if(keyMap.get(char).classList.contains("yellowBack")){
+        keyMap.get(char).classList.remove("yellowBack");
+        keyMap.get(char).classList.add("yellowToGreen");
+        return false;
+    }
+    return true;
+}
+function checkForYellow(char){
+    if(!keyMap.get(char).classList.contains("greenBack")){
+        return true;
+    }
+    return false;
+}
 function checkCharacters(){
     //if the word is in list
     for(let i = 0; i< column; i++){
         let char = text.charAt(i);
         cells[rowCounter][i].classList.remove("scale");
+
         if(target.toUpperCase().includes(char)){
             if(target.charAt(i).toUpperCase()==char){
                 cells[rowCounter][i].classList.add("green-cell");
-                keyMap.get(char).classList.add("greenBack");
-                // cells[rowCounter][i].innerHTML = "A"; 
+                if(checkForGreen(char)){
+                    keyMap.get(char).classList.add("greenBack");
+                }
             }
             else{
                 cells[rowCounter][i].classList.add("yellow-cell");
-                keyMap.get(char).classList.add("yellowBack");
-                // cells[rowCounter][i].innerHTML = "B";
+                if(checkForYellow(char)){
+                    keyMap.get(char).classList.add("yellowBack");
+                }
             }
         }
         else{
             cells[rowCounter][i].classList.add("gray-cell");
             keyMap.get(char).classList.add("grayBack");
-            // cells[rowCounter][i].innerHTML = "F";
         }
     }
     rowCounter++;
     colCounter=0;
     text="";
-
 }
 
 function whichButton(event){
