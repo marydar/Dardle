@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: rgb(8, 8, 8);
+}
+.header{
+    width: 100vw;
+    height: 65px;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    background-color: rgb(8, 8, 8);
+    border-bottom: 0.2px solid #776c5c ;
+    justify-content:center;
+    align-items: center;
+}
+.title{
+    color: aliceblue;
+    font-size: 32px;
+    font-family: Times, serif;
+    background-color: transparent;
+    font-weight: bold;
+    
+}
