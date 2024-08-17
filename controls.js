@@ -95,7 +95,10 @@ function checkCharacters(){
 }
 
 function whichButton(event){
-    pressedChar(event.key);
+    console.log(event.keyCode);
+    if((event.keyCode>=65 && event.keyCode<=90 )|| event.keyCode==8 || event.keyCode==13 ){
+        pressedChar(event.key);
+    }
 }
 function keyClicked(element) {
     pressedChar(element.id);
