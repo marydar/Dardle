@@ -7,6 +7,13 @@ const column = 5;
 let rowCounter =0;
 let colCounter =0;
 
+function closeAlert(){
+    console.log("koko");
+    document.getElementById("alert").classList.remove("showAlert");
+    document.getElementById("alert").classList.add("removeAlert");
+    location.reload();
+}
+
 // var data = $.csv.toObjects(csv);
 // async function fetchData() {
 //     try {
@@ -89,6 +96,10 @@ function checkCharacters(){
             keyMap.get(char).classList.add("grayBack");
         }
     }
+    if(text==target.toUpperCase()){
+        document.getElementById("alert").classList.remove("removeAlert");
+        document.getElementById("alert").classList.add("showAlert");
+    }
     rowCounter++;
     colCounter=0;
     text="";
@@ -105,6 +116,7 @@ function keyClicked(element) {
 }
 const SPEED = 0.5;
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("alert").classList.add("removeAlert");
     for (let i = 0; i < rows; i++) {
         cells[i] = [];
         for (let j = 0; j < column; j++) {

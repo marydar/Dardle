@@ -13,6 +13,17 @@
     <div class="header">
         <div class="title">Dardle</div>
     </div>
+
+    <div class="overlay" id="alert">
+        <div class="alertHeader">
+            <div class="status" id="status">you've lost</div>
+            <img id="close" onclick="closeAlert()" class="img"  src="close.png" alt="close">
+        </div>
+        <!-- <div id="answer">Reoct</div> -->
+        <div style="background-color: transparent;"><button class="button" id="restart" onclick="closeAlert()">RESTART</button></div>
+
+    </div>
+
     <div class="content">
         <div class="grid-container">
             <div class="grid-item" id="cell-1.1"></div>

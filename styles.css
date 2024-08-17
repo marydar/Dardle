@@ -227,6 +227,79 @@
     to {transform: scale(1);}
   }
   .img{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
+  }
+  .overlay {
+    display: flex;
+    flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    z-index: 9999; /* Ensure it's on top */
+  }
+  .alertHeader{
+    width: 500px;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    background-color:transparent;
+    /* border-bottom: 0.2px solid rgb(87, 87, 87); */
+    justify-content:center;
+    align-items: center;
+}
+.status{
+    margin-top: 30px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: Times, serif;
+    background-color: transparent;
+    font-weight: bold;  
+}
+.button{
+    background-color: darkslategray;
+    color: aliceblue;
+    width: 100px;
+    height: 40px;
+}
+#close{
+    cursor: pointer;
+    background-color:transparent ;
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    /* min-width: 40px;
+    height: 50px; */
+    /* border-radius: 5px;;
+    padding: 5px;
+    margin: 5px; */
+    right: 0px;
+    position: absolute;
+    top: 10px;
+}
+  .removeAlert{
+    display: none;
+  }
+  .showAlert{
+    display: inline-block;
+    /* animation-name: alert;
+    animation-duration: 2s;
+    animation-delay: 0s; */
+  }
+  @keyframes alert {
+    from {transform: scale(0.6);}
+    to {transform: scale(1);}
   }
