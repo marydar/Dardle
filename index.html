@@ -12,17 +12,26 @@
 <body onkeyup="whichButton(event)">
     <div class="header">
         <div class="title">Dardle</div>
+        <div class="error" id="error" onclick="closeError()">Invallid word</div>
     </div>
 
     <div class="overlay" id="alert">
-        <div class="alertHeader">
-            <div class="status" id="status">you've lost</div>
-            <img id="close" onclick="closeAlert()" class="img"  src="close.png" alt="close">
+        <div class="alert-box">
+            <div class="alertHeader">
+                <div class="status" id="status">you've lost</div>
+                <img id="close" onclick="closeAlert()" class="img"  src="close.png" alt="close">
+            </div>
+            <div class="extra-message">
+                <div style="text-align:center; font-size:20px; border:1px solid white;  border-radius:30px; padding: 10px;"   id="score">1/1</div>
+                <div style="text-align:center; font-size: 20px; border:1px solid white;  border-radius:30px; padding: 10px;" id="answer">Reoct</div>    
+            </div>
+            <div style="background-color: transparent;"><button class="button" id="restart" onclick="restartClick()">RESTART</button></div>
+    
         </div>
-        <!-- <div id="answer">Reoct</div> -->
-        <div style="background-color: transparent;"><button class="button" id="restart" onclick="closeAlert()">RESTART</button></div>
-
     </div>
+    <!-- <div class="message-box" id="notFound">
+        <div class="message">Invallid word</div>
+    </div> -->
 
     <div class="content">
         <div class="grid-container">
